@@ -1,4 +1,8 @@
-def hangman(word):
+my_list = ["Hello", "This", "is", "Python", "Programming", "Beginner", "Level"]
+def hangman(my_list):
+    import random
+    n = random.randint(0, len(my_list) - 1)
+    word = my_list[n]
     wrong = 0
     stages = ["                           ",
               "___________________________",
@@ -31,6 +35,4 @@ def hangman(word):
             break
     if not win:
         print("You lost, word was {}.".format(word))
-
-
-hangman("Tanzeel")
+hangman(my_list)
